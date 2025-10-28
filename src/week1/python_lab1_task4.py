@@ -1,38 +1,44 @@
-"""
-Task 4 – Text-based Arithmetic Analyzer
---------------------------------------
-Create a text-based analyzer that:
-1. Counts non-space characters.
-2. Counts words.
-3. Extracts numbers and computes their sum and average.
-Use helper functions:
-- count_characters(text)
-- count_words(text)
-- extract_numbers(text)
-- analyze_text(text)
-Print formatted summary in main.
-"""
+# Author: Hazal Guc
+# Student ID: 231ADB264
+# Task 4 – Text-based Arithmetic Analyzer
 
 def count_characters(text):
     """Count non-space characters in a string."""
-    # TODO: implement
-    pass
+    return len([ch for ch in text if not ch.isspace()])
 
 def count_words(text):
     """Count number of words in a string."""
-    # TODO: implement
-    pass
+    return len(text.split())
 
 def extract_numbers(text):
-    """Return list of integers found in text."""
-    # TODO: implement
-    pass
+    """Extract all numbers from text and return as list of floats."""
+    numbers = []
+    for part in text.split():
+        if part.replace('.', '', 1).isdigit():
+            numbers.append(float(part))
+    return numbers
 
 def analyze_text(text):
-    """Perform text-based arithmetic analysis."""
-    # TODO: call helper functions and compute total, average, etc.
-    pass
+    """Analyze text and return summary as a dictionary."""
+    chars = count_characters(text)
+    words = count_words(text)
+    nums = extract_numbers(text)
+    total = sum(nums)
+    avg = total / len(nums) if nums else 0
+    return {
+        "characters": chars,
+        "words": words,
+        "numbers_found": len(nums),
+        "sum": total,
+        "average": avg
+    }
 
 if __name__ == "__main__":
-    # TODO: read input, call analyze_text(), and print results
-    pass
+    text = input("Enter a text with numbers: ")
+    result = analyze_text(text)
+    print("\n--- Text Analysis Summary ---")
+    print(f"Non-space characters: {result['characters']}")
+    print(f"Word count: {result['words']}")
+    print(f"Numbers found: {result['numbers_found']}")
+    print(f"Sum of numbers: {result['sum']}")
+    print(f"Average of numbers: {result['average']:.2f}")
