@@ -1,5 +1,8 @@
+# Student name: Hazal Guc
+# Student ID: 231ADB264
+
 """
-Lab 3.1 – Simple Datasets and Aggregates
+Lab 3.1 🧊 Simple Datasets and Aggregates
 
 Goals:
 - Create and manipulate Python lists and dictionaries.
@@ -15,15 +18,21 @@ Instructions:
 4. Print your results in a clear, formatted way.
 """
 
-# TODO: Create the datasets - up to you to fill in the data
-temperatures = []
-city_population = {}
+# TODO: Create the datasets – up to you to fill in the data
+temperatures = [12, 14, 11, 13, 15, 16, 14]
+city_population = {
+    "Riga": 605802,
+    "Vilnius": 587581,
+    "Tallinn": 437619,
+    "Liepaja": 68238,
+    "Daugavpils": 82274,
+}
 
 # TODO: Compute aggregates
-average_temperature = 0
-largest_city = ""
-largest_population = 0
-total_population = 0
+average_temperature = sum(temperatures) / len(temperatures)
+largest_city = max(city_population.keys(), key=lambda x: city_population[x])
+largest_population = city_population[largest_city]
+total_population = sum(city_population.values())
 
 # TODO: Print results
 print("Average temperature:", average_temperature)
