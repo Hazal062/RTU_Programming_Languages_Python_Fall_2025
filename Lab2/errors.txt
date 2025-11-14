@@ -1,0 +1,16 @@
+Line 10: BADLINE_NO_DATE_NO_TIME -> missing required fields
+Line 11: BA_BAD,RIX,LON,2025-11-15 11:00,INVALID_DATE,250.00 -> flight_id must be 2-8 alphanumeric characters; arrival_datetime has invalid format (expected YYYY-MM-DD HH:MM)
+Line 12: SK404,OSL,RIX,2025-11-15 14:00,2025-11-15 12:00,120.00 -> arrival_datetime must be after departure_datetime
+Line 14: QR1,DOH,SYD,INVALID_DATETIME,2025-11-17 23:30,980.00 -> departure_datetime has invalid format (expected YYYY-MM-DD HH:MM)
+Line 15: KL999,AMS,,2025-11-14 09:00,2025-11-14 11:15,180.00 -> destination must be 3 uppercase letters
+Line 16: AY5587,HEL,RIX,2025-11-15 13:20,2025-11-15 14:15,-10.00 -> price must be positive
+Line 17: LH99999999,FRA,LAX,2025-11-13 18:30,2025-11-13 18:10,700.00 -> flight_id must be 2-8 alphanumeric characters; arrival_datetime must be after departure_datetime
+Line 18: SN2902,BRU,LHR,2025-13-40 12:00,2025-13-40 12:00,99.99 -> departure_datetime has invalid format (expected YYYY-MM-DD HH:MM); arrival_datetime has invalid format (expected YYYY-MM-DD HH:MM)
+Line 10: BADLINE_NO_DATE_NO_TIME -> missing required fields
+Line 11: BA_BAD,RIX,LON,2025-11-15 11:00,INVALID_DATE,250.00 -> flight_id must be 2-8 alphanumeric characters; arrival_datetime has invalid format (expected YYYY-MM-DD HH:MM)
+Line 12: SK404,OSL,RIX,2025-11-15 14:00,2025-11-15 12:00,120.00 -> arrival_datetime must be after departure_datetime
+Line 14: QR1,DOH,SYD,INVALID_DATETIME,2025-11-17 23:30,980.00 -> departure_datetime has invalid format (expected YYYY-MM-DD HH:MM)
+Line 15: KL999,AMS,,2025-11-14 09:00,2025-11-14 11:15,180.00 -> destination must be 3 uppercase letters
+Line 16: AY5587,HEL,RIX,2025-11-15 13:20,2025-11-15 14:15,-10.00 -> price must be positive
+Line 17: LH99999999,FRA,LAX,2025-11-13 18:30,2025-11-13 18:10,700.00 -> flight_id must be 2-8 alphanumeric characters; arrival_datetime must be after departure_datetime
+Line 18: SN2902,BRU,LHR,2025-13-40 12:00,2025-13-40 12:00,99.99 -> departure_datetime has invalid format (expected YYYY-MM-DD HH:MM); arrival_datetime has invalid format (expected YYYY-MM-DD HH:MM)
